@@ -7,6 +7,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'active_link_to'
+gem 'sendgrid-ruby'
 
 group :development do
   gem 'sqlite3'
