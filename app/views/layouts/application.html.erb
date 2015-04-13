@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.0/css/materialize.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js'></script>
+  </head>
+  <body>
+    <nav class='white' role='navigation'>
+      <div class='nav-wrapper container'>
+        <a href='/' class='brand-logo grey-text text-darken-2 hide-on-small-only'>
+          MICHAEL DEAN PIERCE
+        </a>
+        <ul class='right hide-on-med-and-down'>
+          <li><a href='/work' class='grey-text text-darken-2'>WORK</a></li>
+          <li><a href='/about' class='grey-text text-darken-2'>ABOUT</a></li>
+          <li><a href='/contact' class='grey-text text-darken-2'>CONTACT</a></li>
+        </ul>
+
+        <ul id='nav-mobile' class='side-nav'>
+          <li><a href='/work' class='grey-text text-darken-2'>WORK</a></li>
+          <li><a href='/about' class='grey-text text-darken-2'>ABOUT</a></li>
+          <li><a href='/contact' class='grey-text text-darken-2'>CONTACT</a></li>
+        </ul>
+        <div class="hide-on-med-and-up" style='float:left;'>
+          <a href='/' class='grey-text text-darken-2'>
+            MICHAEL DEAN PIERCE
+          </a>
+        </div>
+        <a href='#' data-activates='nav-mobile' class='button-collapse right'><i class='grey-text mdi-navigation-menu'></i></a>
+      </div>
+    </nav>
+    <br><br>
+    <main>
+      <div class='container'>
+        <%= yield %>
+      </div>
+    </main>
+    <footer class='sticky-footer page-footer grey grey-darken-2'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col l6 s12'>
+            <h5 class='white-text'>Have a project for me?</h5>
+            <a href='/contact' class='waves-effect waves-light btn-large blue'>
+              GET IN TOUCH
+            </a>
+          </div>
+          <div class='col l4 offset-l2 s12'>
+            <h5 class='white-text'>CONTACT ME</h5>
+            <ul>
+              <li>
+                <a class='grey-text text-lighten-3'
+                   href='mailto:matchmike1313@gmail.com'>
+                  EMAIL
+                </a>
+              </li>
+              <li>
+                <a class='grey-text text-lighten-3'
+                   href='https://github.com/michaelDpierce'>
+                  GITHUB
+                </a>
+              </li>
+              <li>
+                <a class='grey-text text-lighten-3'
+                   href='https://twitter.com/mdpierce13'>
+                  TWITTER
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class='footer-copyright'>
+        <div class='container'>
+          © 2014-2015 Michael Dean Pierce
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+(function($){
+  $(function(){
+
+    $('.button-collapse').sideNav();
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+</script>
