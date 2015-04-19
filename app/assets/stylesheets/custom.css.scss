@@ -10,6 +10,12 @@ body {
   flex-direction: column;
 }
 
+@media (max-width: 400px) {
+  h1 {
+    font-size: 40px !important;
+  }
+}
+
 main {
   flex: 1 0 auto;
 }

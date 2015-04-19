@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class='grey lighten-5'>
   <head>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -27,20 +27,17 @@
           </li>
         </ul>
         <ul id='nav-mobile' class='side-nav'>
-          <li class="<%= active_link_to_class('#', active:[['static_pages'],['work']]) %>">
-            <a href='/' class='grey-text text-darken-2'>WORK</a>
+          <li class="<%= active_link_to_class('#', active:[['static_pages'],['index']]) %>">
+            <a href='/' class='grey-text text-darken-2'>BOOK</a>
           </li>
-          <li class="<%= active_link_to_class('#', active:[['static_pages'],['about']]) %>">
-            <a href='/about' class='grey-text text-darken-2'>ABOUT</a>
+          <li class="<%= active_link_to_class('#', active:[['static_pages'],['quotes']]) %>">
+            <a href='/the_truth_about_masturbation_quotes' class='grey-text text-darken-2'>QUOTES</a>
           </li>
-          <li class="<%= active_link_to_class('#', active:[['contacts'],['new']]) %>">
-            <a href='/contact' class='grey-text text-darken-2'>CONTACT</a>
+          <li>
+            <a href='#' class='grey-text text-darken-2'>PRE-ORDER THE BOOK</a>
           </li>
         </ul>
-        <div class="hide-on-med-and-up" style='float:left;'>
-          <a href='/' class='grey-text text-darken-2'>
-            MICHAEL DEAN PIERCE
-          </a>
+        <div class='hide-on-med-and-up' style='float:left;'>
         </div>
         <a href='#' data-activates='nav-mobile' class='button-collapse right'><i class='grey-text mdi-navigation-menu'></i></a>
       </div>
