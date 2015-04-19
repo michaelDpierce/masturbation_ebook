@@ -1,5 +1,4 @@
-<title>The Truth About Masturbation / eBook</title>
-
+<title>The Truth About Masturbation eBook // BOOK</title>
 <div class='row container'>
   <h1 class='grey-text text-darken-3'>The Truth About Masturbation</h1>
   <div class='col m6'>
@@ -8,33 +7,47 @@
       of masturbaiton.
     </h4>
     <br><br>
-    <a class='waves-effect waves-light btn-large red darken-4 white-text' style='width:300px;'>Pre-order the eBook!</a>
+    <a class='waves-effect waves-light btn-large red darken-4 white-text'
+       style='width:300px;'>
+      Pre-order the eBook!
+    </a>
     <br><br>
-    <a class='waves-effect waves-light btn-large red darken-4 white-text' style='width:300px;'>Get the First Chapter Free!</a>
+    <a class='waves-effect waves-light btn-large red darken-4 white-text'
+       style='width:300px;'
+       href='/the_truth_about_masturbation_send_me_my_free_chapter'>
+      Get the First Chapter Free!
+    </a>
   </div>
   <div class='col m6'>
     <%= image_tag('http://ecx.images-amazon.com/images/I/813WoynVoZL.jpg', size: '300x450') %>
   </div>
 </div>
 <br>
-<div class='row red darken-4 valign-wrapper' style='height: 200px;'>
+<div class='row red darken-4 valign-wrapper' style='height: 325px;'>
   <div class='container'>
-    <div class='col m3 valign'>
-      <b class='white-text'>Get the first chapter free! Just enter your first name and email!<b>
-    </div>
-    <div class='col m3 input-field valign'>
-      <i class='mdi-action-account-circle prefix'></i>
-      <input id='first_name' type='text' class='validate'>
-      <label for='first_name'>First Name</label>
-    </div>
-    <div class='col m3 input-field valign'>
-      <i class='mdi-communication-email prefix'></i>
-      <input id='email' type='text' class='validate'>
-      <label for='email'>Email</label>
-    </div>
-    <div class='col m3 valign'>
-      <a class='waves-effect waves-light btn-large white red-text text-darken-4' style='width:300px;'>Send Me My Free Chapter!</a>
-    </div>
+    <%= form_for Contact.new do |f| %>
+      <form>
+        <div class='row'>
+          <br>
+          <h4 class='white-text'>Get the first chapter free! Just enter your first name and email!</h4>
+          <br><br>
+          <div class='input-field col s2'>
+            <%= f.text_field :first_name %>
+            <label for='first_name'>First Name</label>
+          </div>
+          <div class='input-field col s4'>
+            <%= f.text_field :email %>
+            <label for='email'>Email</label>
+          </div>
+          <div class='col s6'>
+            <button class='btn btn-large waves-effect waves-light white red-text text-darken-4'>
+              Send me my free chapter!
+              <i class='mdi-content-send right'></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    <% end %>
   </div>
 </div>
 <div class='slider'>
@@ -60,7 +73,8 @@
   </ul>
 </div>
 <br><br>
-<div class='row red darken-4 valign-wrapper' style='height: 400px;'>
+<div class='row red darken-4 white-text' style='height: 400px;'>
+  <br><br><br><br>
   <div class='container'>
     <div class='col m6'>
       <div class='row'>
@@ -136,8 +150,9 @@
   </div>
 </div>
 <br><br><br>
-<div class='row red darken-4 valign-wrapper' style='height: 200px;'>
+<div class='row red darken-4 white-text' style='height: 200px;'>
   <div class='container'>
+    <br><br>
     <center>
       <h4>Featured On!</h4>
     </center>

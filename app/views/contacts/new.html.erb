@@ -1,52 +1,53 @@
-<title>MDP - CONTACT</title>
-<%= form_for Contact.new do |f| %>
-  <h1 class='grey-text text-darken-2'>
-    <span class='hide-on-small-only'>
-      CONTACT
-      <h4 class='grey-text'>For questions or inquiries use the form below.</h4>
-    </span>
-    <span class='hide-on-med-and-up'>
-      <center>
-        CONTACT
-        <h4 class='grey-text'>For questions or inquiries use the form below.</h4>
-      </center>
-    </span>
-  </h1>
+<title>The Truth About Masturbation eBook // Get Your Free Chapter</title>
+<div class='container'>
+  <%= form_for Contact.new do |f| %>
+    <form>
+      <div class='row'>
+        <div class='input-field col s12'>
+          <%= f.text_field :first_name %>
+          <label for='first_name'>First Name</label>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='input-field col s12'>
+          <%= f.text_field :email %>
+          <label for='email'>Email</label>
+        </div>
+      </div>
+      <button class='btn btn-large waves-effect waves-light red darken-4 white-text'>
+        Send me my free chapter!
+        <i class='mdi-content-send right'></i>
+      </button>
+    </form>
+  <% end %>
+</div>
 
-
-  <br><br>
-  <form>
-    <div class='row'>
-      <div class='input-field col s6'>
-        <%= f.text_field :first_name %>
-        <label for='first_name'>First Name</label>
-      </div>
-      <div class='input-field col s6'>
-        <%= f.text_field :last_name %>
-        <label for='last_name'>Last Name</label>
-      </div>
-    </div>
-    <div class='row'>
-      <div class='input-field col s12'>
-        <%= f.text_field :email %>
-        <label for='email'>Email</label>
-      </div>
-    </div>
-    <div class='row'>
-      <div class='input-field col s12'>
-        <%= f.text_field :subject %>
-        <label for='subject'>Subject</label>
-      </div>
-    </div>
-    <div class='row'>
-      <div class='input-field col s12'>
-        <%= f.text_field :message, class:'materialize-textarea' %>
-        <label for='textarea1'>Message</label>
-      </div>
-    </div>
-    <button class='btn waves-effect waves-light blue'>SEND
-      <i class='mdi-content-send right'></i>
-    </button>
-  </form>
-<% end %>
-<br><br><br>
+<style>
+/* label color */
+ .input-field label {
+   color: #424242 !important;
+ }
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+   color: #424242 !important;
+ }
+ /* label underline focus color */
+ .input-field input[type=text]:focus {
+   border-bottom: 1px solid #424242 !important;
+   box-shadow: 0 1px 0 0 #424242 !important;
+ }
+ /* valid color */
+ .input-field input[type=text].valid {
+   border-bottom: 1px solid #424242 !important;
+   box-shadow: 0 1px 0 0 #424242 !important;
+ }
+ /* invalid color */
+ .input-field input[type=text].invalid {
+   border-bottom: 1px solid #424242 !important;
+   box-shadow: 0 1px 0 0 #424242 !important;
+ }
+ /* icon prefix focus color */
+ .input-field .prefix.active {
+   color: #424242 !important;
+ }
+</style>
