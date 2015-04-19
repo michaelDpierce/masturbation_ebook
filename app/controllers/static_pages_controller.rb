@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
-  def home
+  def index
   end
-
-  def about
+  def quotes
   end
 end

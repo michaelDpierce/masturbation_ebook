@@ -6,22 +6,32 @@
     <%= csrf_meta_tags %>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.0/css/materialize.min.css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js'></script>
+    <script>
+    $(document).ready(function(){
+      $('.slider').slider({full_width: true, indicators: false});
+    });
+
+    </script>
+
+    <!--
+    Indicators	Set to false to hide slide indicators. (Default: True)
+Height	Set height of slider. (Default: 400)
+Transition	Set the duration of the transition animation in ms. (Default: 500)
+Interval	Set the duration between transitions in ms. (Default: 6000)
+     -->
   </head>
   <body>
-    <nav class='white' role='navigation'>
+    <nav class='grey lighten-5' role='navigation'>
       <div class='nav-wrapper container'>
-        <a href='/' class='brand-logo grey-text text-darken-2 hide-on-small-only'>
-          MICHAEL DEAN PIERCE
-        </a>
         <ul class='right hide-on-med-and-down'>
-          <li class="<%= active_link_to_class('#', active:[['static_pages'],['work']]) %>">
-            <a href='/' class='grey-text text-darken-2'>WORK</a>
+          <li class="<%= active_link_to_class('#', active:[['static_pages'],['index']]) %>">
+            <a href='/' class='grey-text text-darken-2'>BOOK</a>
           </li>
-          <li class="<%= active_link_to_class('#', active:[['static_pages'],['about']]) %>">
-            <a href='/about' class='grey-text text-darken-2'>ABOUT</a>
+          <li class="<%= active_link_to_class('#', active:[['static_pages'],['quotes']]) %>">
+            <a href='/the_truth_about_masturbation_quotes' class='grey-text text-darken-2'>QUOTES</a>
           </li>
-          <li class="<%= active_link_to_class('#', active:[['contacts'],['new']]) %>">
-            <a href='/contact' class='grey-text text-darken-2'>CONTACT</a>
+          <li>
+            <a href='#' class='grey-text text-darken-2'>PRE-ORDER THE BOOK</a>
           </li>
         </ul>
 
@@ -44,54 +54,35 @@
         <a href='#' data-activates='nav-mobile' class='button-collapse right'><i class='grey-text mdi-navigation-menu'></i></a>
       </div>
     </nav>
-    <br><br>
-    <main>
-      <div class='container'>
-        <%= custom_bootstrap_flash %>
-        <%= yield %>
-      </div>
+    <main class='grey lighten-5'>
+      <br>
+      <%= custom_bootstrap_flash %>
+      <%= yield %>
     </main>
-    <footer class='sticky-footer page-footer grey grey-darken-2'>
+    <footer class='sticky-footer page-footer red darken-4'>
       <div class='container'>
         <div class='row'>
           <div class='col l6 s12'>
-            <h5 class='white-text'>Have a project for me?</h5>
-            <a href='/contact' class='waves-effect waves-light btn-large blue'>
-              GET IN TOUCH
+            <a href='/contact' class='waves-effect waves-light btn-large white red-text text-darken-4'>
+              Get The First Chapter Free
             </a>
           </div>
           <div class='col l4 offset-l2 s12'>
-            <h5 class='white-text'>CONTACT ME</h5>
-            <ul>
-              <li>
-                <a class='grey-text text-lighten-3'
-                   href='mailto:matchmike1313@gmail.com'>
-                  EMAIL
-                </a>
-              </li>
-              <li>
-                <a class='grey-text text-lighten-3'
-                   href='https://github.com/michaelDpierce'>
-                  GITHUB
-                </a>
-              </li>
-              <li>
-                <a class='grey-text text-lighten-3'
-                   href='https://twitter.com/mdpierce13'>
-                  TWITTER
-                </a>
-              </li>
-            </ul>
+            <p class='white-text'>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat."
+            </p>
           </div>
         </div>
       </div>
       <div class='footer-copyright'>
         <div class='container'>
-          © 2014-2015 Michael Dean Pierce
+          © Ex nihilo Software LLC 2015
         </div>
       </div>
     </footer>
-    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>
 
@@ -104,3 +95,17 @@
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 </script>
+
+
+
+
+<style>
+body {
+    background-image:url('/public/wheat_field_sunset.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+html {
+    height: 100%
+}
+</style>
