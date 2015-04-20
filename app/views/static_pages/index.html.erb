@@ -9,34 +9,34 @@
         of masturbaiton.
       </h4>
       <br><br>
-      <a class='waves-effect waves-light btn-large red darken-4 white-text'
+      <a class='waves-effect waves-light btn-large blue white-text'
          style='width:300px;'>
         Pre-order the eBook!
       </a>
       <br><br>
-      <a class='waves-effect waves-light btn-large red darken-4 white-text'
+      <a class='waves-effect waves-light btn-large blue white-text'
          style='width:300px;'
          href='/the_truth_about_masturbation_send_me_my_free_chapter'>
         Get the First Chapter Free!
       </a>
     </div>
     <div class='col m6'>
-      <%= image_tag('http://ecx.images-amazon.com/images/I/813WoynVoZL.jpg', size: '300x450') %>
+      <%= image_tag('http://ecx.images-amazon.com/images/I/71dWDwu8-CL.jpg', size: '300x450', class:"z-depth-2") %>
     </div>
   </div>
   <div class='hide-on-med-and-up'>
-    <%= image_tag('http://ecx.images-amazon.com/images/I/813WoynVoZL.jpg', size: '300x450') %>
+    <%= image_tag('http://ecx.images-amazon.com/images/I/71dWDwu8-CL.jpg', size: '300x450', class:"z-depth-2") %>
     <h4 class='grey-text text-darken-3'>
       A brief journey through the history, societal, and religious views
       of masturbaiton.
     </h4>
     <br><br>
-    <a class='waves-effect waves-light btn-large red darken-4 white-text'
+    <a class='waves-effect waves-light btn-large grey darken-3 white-text'
        style='width:300px;'>
       Pre-order the eBook!
     </a>
     <br><br>
-    <a class='waves-effect waves-light btn-large red darken-4 white-text'
+    <a class='waves-effect waves-light btn-large grey darken-3 white-text'
        style='width:300px;'
        href='/the_truth_about_masturbation_send_me_my_free_chapter'>
       Get the First Chapter Free!
@@ -44,24 +44,26 @@
   </div>
 </div>
 <br>
-<div class='row red darken-4 valign-wrapper'>
+<div class='row grey darken-3'>
   <div class='container'>
     <%= form_for Contact.new do |f| %>
       <form>
         <div class='row'>
           <br>
-          <h4 class='white-text'>Get the first chapter free! Just enter your first name and email!</h4>
+          <h4 class='white-text'>
+            Get the first chapter free! Just enter your first name and email!
+          </h4>
           <br><br>
           <div class='input-field col s12 m2'>
-            <%= f.text_field :first_name %>
+            <%= f.text_field :first_name, class:'white-text' %>
             <label for='first_name'>First Name</label>
           </div>
           <div class='input-field col s12 m4'>
-            <%= f.text_field :email %>
+            <%= f.text_field :email, class:'white-text' %>
             <label for='email'>Email</label>
           </div>
           <div class='col s12 m6'>
-            <button class='btn btn-large waves-effect waves-light white red-text text-darken-4'>
+            <button class='btn btn-large waves-effect waves-light blue white-text'>
               Send me my free chapter!
               <i class='mdi-content-send right'></i>
             </button>
@@ -73,8 +75,9 @@
   </div>
 </div>
 <div class='slider'>
-  <ul class='slides grey lighten-5'>
+  <ul class='slides grey lighten-2'>
     <li>
+      <img src="#"/>
       <div class='caption left-align'>
         <h3 class='grey-text text-darken-3'>What You'll Learn</h3>
         <h5 class='grey-text text-darken-3'>Item #1</h5>
@@ -82,12 +85,14 @@
     </li>
     <li>
       <div class='caption left-align'>
+        <img src="#"/>
         <h3 class='grey-text text-darken-3'>What You'll Learn</h3>
         <h5 class='grey-text text-darken-3'>Item #2</h5>
       </div>
     </li>
     <li>
       <div class='caption left-align'>
+        <img src="#"/>
         <h3 class='grey-text text-darken-3'>What You'll Learn</h3>
         <h5 class='grey-text text-darken-3'>Item #3</h5>
       </div>
@@ -95,7 +100,7 @@
   </ul>
 </div>
 <br><br>
-<div class='row red darken-4 white-text'>
+<div class='row grey darken-3 white-text'>
   <br><br><br><br>
   <div class='container'>
     <div class='col m6 s12'>
@@ -174,7 +179,7 @@
   </div>
 </div>
 <br><br><br>
-<div class='row red darken-4 white-text' style='height: 200px;'>
+<div class='row grey darken-3 white-text' style='height: 200px;'>
   <div class='container'>
     <br><br>
     <center>
@@ -182,7 +187,6 @@
     </center>
   </div>
 </div>
-
 <div class='container'>
   <br><br>
   <center>

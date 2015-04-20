@@ -7,8 +7,10 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       redirect_to root_url
-      flash[:success] = "Submission was successfull."
-      ContactMailer.contact_email(@contact).deliver
+      flash[:success] = 'Submission was successfull.'
+      Thread.new do
+        ContactMailer.contact_email(@contact).deliver
+      end
     end
   end
 
