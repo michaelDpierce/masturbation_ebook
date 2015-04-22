@@ -13,7 +13,7 @@
     </script>
   </head>
   <body>
-    <nav class='grey lighten-2' role='navigation'>
+    <nav class='grey lighten-5' role='navigation'>
       <div class='nav-wrapper container'>
         <ul class='right hide-on-med-and-down'>
           <li class="<%= active_link_to_class('#', active:[['static_pages'],['index']]) %>">
@@ -21,6 +21,9 @@
           </li>
           <li class="<%= active_link_to_class('#', active:[['static_pages'],['quotes']]) %>">
             <a href='/the_truth_about_masturbation_quotes' class='grey-text text-darken-2'>QUOTES</a>
+          </li>
+          <li class="<%= active_link_to_class('#', active:[['static_pages'],['blog', 'article_one', 'article_two', 'article_three']]) %>">
+            <a href='/blog' class='grey-text text-darken-2'>BLOG</a>
           </li>
           <li>
             <a href='#' class='grey-text text-darken-2'>PRE-ORDER THE BOOK</a>
@@ -33,6 +36,9 @@
           <li class="<%= active_link_to_class('#', active:[['static_pages'],['quotes']]) %>">
             <a href='/the_truth_about_masturbation_quotes' class='grey-text text-darken-2'>QUOTES</a>
           </li>
+          <li class="<%= active_link_to_class('#', active:[['static_pages'],['blog']]) %>">
+            <a href='/blog' class='grey-text text-darken-2'>BLOG</a>
+          </li>
           <li>
             <a href='#' class='grey-text text-darken-2'>PRE-ORDER THE BOOK</a>
           </li>
@@ -42,7 +48,7 @@
         <a href='#' data-activates='nav-mobile' class='button-collapse right'><i class='grey-text mdi-navigation-menu'></i></a>
       </div>
     </nav>
-    <main class='grey lighten-2'>
+    <main class='grey lighten-5'>
       <br>
       <%= custom_bootstrap_flash %>
       <%= yield %>
@@ -91,13 +97,3 @@
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 </script>
-<style>
-body {
-    background-image:url('/public/wheat_field_sunset.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-html {
-    height: 100%
-}
-</style>
