@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class='white'>
+<html class='grey lighten-5'>
   <head>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -8,12 +8,12 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js'></script>
     <script>
     $(document).ready(function(){
-      $('.slider').slider({full_width: true, indicators: false, height: 250});
+      $('.slider').slider({full_width: true, indicators: true, height: 300});
     });
     </script>
   </head>
   <body>
-    <nav class='white' role='navigation'>
+    <nav class='grey lighten-5' role='navigation'>
       <div class='nav-wrapper container'>
         <ul class='right hide-on-med-and-down'>
           <li class="<%= active_link_to_class('#', active:[['static_pages'],['index']]) %>">
@@ -48,7 +48,7 @@
         <a href='#' data-activates='nav-mobile' class='button-collapse right'><i class='grey-text mdi-navigation-menu'></i></a>
       </div>
     </nav>
-    <main class='white'>
+    <main class='grey lighten-5'>
       <br>
       <%= custom_bootstrap_flash %>
       <%= yield %>
@@ -57,17 +57,17 @@
       <div class='container'>
         <div class='row'>
           <div class='col l8 s12'>
+            <h5 class='white-text'>Are you worried about whether or not masturbation is a sin?</h5>
+            <h5 class='white-text'>Is masturbation a source of guilt and shame in your life?</h5>
             <p class='white-text'>
-              Masturbation has been practiced by humans for at least as long as
-              we have had written language, and likely long before then.
-              However, masturbation is a difficult issue for followers of
-              religion given the various religious laws pertaining to Suality
-              and the guilt, shame, and danger in store for those who do not
-              follow these laws. Whether you are a follower of Islam,
-              Christianity, Judaism, or another view, The Truth About Masturbation
-               will help you to understand the full context of masturbation
-               throughout history with the goal of helping you become a better,
-               stronger person mentally, physically, and spiritually.
+              The Truth About Masturbation will give you a
+              full understanding of masturbation and will help you on your
+              journey to become a stronger person mentally, physically, and
+              spiritually. Whether masturbation is a source of spiritual trouble
+              in your life, or if you are just curious to learn more about the
+              fascinating history of the issue, The Truth About Masturbation
+              will provide you a full and deep understanding of masturbation
+              and its place in the human experience.
             </p>
           </div>
           <div class='col l4 s12'>
@@ -91,9 +91,7 @@
 <script>
 (function($){
   $(function(){
-
     $('.button-collapse').sideNav();
-
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 </script>
