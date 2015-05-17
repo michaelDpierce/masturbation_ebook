@@ -1,16 +1,20 @@
 class ContactsController < ApplicationController
+  require 'mailgun'
+
   def new
     @contact = Contact.new
   end
 
   def create
     @contact = Contact.new(contact_params)
-    flash[:success] = 'We will be in touch soon! Thank you.'
-      redirect_to root_url
-      flash[:success] = 'We will be in touch soon! Thank you.'
+
+    puts 'mailer'
+    if @contact.save
       Thread.new do
-        ContactMailer.contact_email(@contact).deliver
+        ContactMailer.sign_up(@contact.email).deliver
       end
+      redirect_to root_url
+    end
   end
 
   private
