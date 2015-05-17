@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
+    flash[:success] = 'We will be in touch soon! Thank you.'
       redirect_to root_url
       flash[:success] = 'We will be in touch soon! Thank you.'
       Thread.new do
