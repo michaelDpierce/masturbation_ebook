@@ -15,4 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= materialize.min.js
-//= require toastr

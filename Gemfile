@@ -8,7 +8,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'active_link_to'
-gem 'toastr-rails'
 gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
 
 group :development do

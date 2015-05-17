@@ -84,7 +84,7 @@
 </div>
 <div class='row grey darken-3'>
   <div class='container' id='send_me_more'>
-    <%= form_for Contact.new do |f| %>
+    <%= form_for Contact.new, :remote => true do |f| %>
       <form>
         <div class='row'>
           <br>
@@ -97,8 +97,9 @@
             <label for='email'>Email</label>
           </div>
           <div class='col s12 m6'>
-            <button class='btn btn-large waves-effect waves-light blue white-text'>
-              Sign Up for my free chapter!
+            <button class='btn btn-large waves-effect waves-light blue white-text'
+                    onclick="Materialize.toast('Your free chapter is on the way.', 3000)">
+              Send me my free chapter!
               <i class='mdi-content-send right'></i>
             </button>
           </div>
