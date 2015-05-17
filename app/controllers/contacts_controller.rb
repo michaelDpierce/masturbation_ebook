@@ -5,18 +5,16 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if @contact.save
       redirect_to root_url
-      flash[:success] = 'Submission was successfull.'
+      flash[:success] = 'We will be in touch soon! Thank you.'
       Thread.new do
         ContactMailer.contact_email(@contact).deliver
       end
-    end
   end
 
   private
 
   def contact_params
-    params.require(:contact).permit(:first_name, :last_name, :email, :message, :subject)
+    params.require(:contact).permit(:email)
   end
 end
